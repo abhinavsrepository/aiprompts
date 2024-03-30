@@ -1,14 +1,16 @@
 'use client'
 import React from 'react'
 import Header from "@/components/Header"
+import Hero from "@/components/Route/Hero"
 type Props = {}
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   return (
     <div>
-      <Header/>
+      <Header activeItem={0}/>
+      <Hero/>
     </div>
   )
 }
 
-export default page
+export default Page
