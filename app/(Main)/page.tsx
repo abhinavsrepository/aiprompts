@@ -7,7 +7,7 @@ type Props = {}
 const Page = (props: Props) => {
   return (
     <div>
-      <Header activeItem={0}/>
+      <Header activeItem={0} user={undefined} isSellerExist={undefined}/>
       <Hero/>
     </div>
   )
