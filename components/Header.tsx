@@ -7,6 +7,7 @@ import { FaBars } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import { UserProfile } from "@clerk/nextjs";
 import { User } from "@clerk/nextjs/server";
+import {motion} from "framer-motion";
 import DropDown from "./DropDown";
 
 type Props = {
@@ -48,7 +49,7 @@ const Header = ({ user, activeItem,isSellerExist }: Props) => {
       }`}
     >
       <div className="hidden md:w-[90%] mx-auto md:flex items-center justify-between">
-        <div>
+        <div >
           <Link href={"/"}>
             <h1 className="font-Inter text-3xl cursor-pointer">
               <span className="text-[#64ff4c]">Iris</span>Design
@@ -62,12 +63,12 @@ const Header = ({ user, activeItem,isSellerExist }: Props) => {
           <AiOutlineSearch className="text-[25px] mr-5 cursor-pointer" />
           {user ? (
             <div>
-              <DropDown
+              {/* <DropDown
                 user={user}
                 setOpen={setOpen}
                 handleProfile={handleProfile}
                 isSellerExist={isSellerExist}
-              />
+              /> */}
             </div>
           ) : (
             <Link href="/sign-in">
@@ -116,7 +117,7 @@ const Header = ({ user, activeItem,isSellerExist }: Props) => {
           >
             <div className="fixed bg-black h-screen top-0 right-0 w-[60%] z-[9999]">
               <div className="mt-20 p-5">
-                <Navigation activeItem={activeItem} />
+                {/* <Navigation activeItem={activeItem} />
                 {user && (
                   <DropDown
                     user={user}
@@ -124,7 +125,7 @@ const Header = ({ user, activeItem,isSellerExist }: Props) => {
                     handleProfile={handleProfile}
                     isSellerExist={isSellerExist}
                   />
-                )}
+                )} */}
               </div>
             </div>
           </div>
